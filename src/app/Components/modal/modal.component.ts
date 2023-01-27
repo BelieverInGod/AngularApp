@@ -14,6 +14,9 @@ export class ModalComponent implements OnInit {
   ngOnInit(): void {
     if(localStorage.getItem('user')) {
       this.status = true
+      this.onSwitch(true)
+    } else {
+      this.onSwitch(false)
     }
   }
 
