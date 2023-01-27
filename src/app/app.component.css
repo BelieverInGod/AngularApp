@@ -3,8 +3,13 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  margin-top: 100px;
+  justify-content: center;
   flex-direction: column;
+}
+.in {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
 }
 .show {
   display: flex;

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +7,14 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-app';
-  @Input() status: boolean 
-  
+  switch: boolean = false
+
+  addSwitch(event:boolean) {
+    this.switch = event
+  }
+
   public removeUser() {
+    this.switch = false
     if(localStorage.getItem('user')) {
       localStorage.removeItem('user')
     }

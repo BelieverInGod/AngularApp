@@ -41,8 +41,14 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 .modal__dialog {
+  display: flex;
   max-width: 500px;
   margin: 40px auto;
+}
+@media screen and (max-width: 560px) {
+  .modal__dialog {
+    min-width: 290px;
+  }
 }
 .modal__content {
   position: relative;
