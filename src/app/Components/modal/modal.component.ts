@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ModalComponent {
   status: boolean = false;
-  username: string;
-  password: string;
+  username: string = '';
+  password: string = '';
   
   ngOnInit(): void {
     if(localStorage.getItem('user')) {
@@ -16,11 +16,12 @@ export class ModalComponent {
     }
   }
 
-  onChange(event: any) {
+  onChangeName(event: any) {
     this.username = event.target.value;
+  }
+  onChangePass(event: any) {
     this.password = event.target.value;
   }
-
   clickEvent(){
       this.status = !this.status;       
   }
@@ -30,9 +31,12 @@ export class ModalComponent {
       username: this.username,
       password: this.password
     }
-    localStorage.setItem('user', JSON.stringify(user));
-    if(localStorage.getItem('user')) {
-      this.status = true
+    if (user.username !== '' && user.password !== '') {
+      localStorage.setItem('user', JSON.stringify(user));
+      if(localStorage.getItem('user')) {
+        this.status = true
+      }
     }
+    
   }
 }
