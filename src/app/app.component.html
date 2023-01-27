@@ -1,1 +1,5 @@
 <app-modal></app-modal>
+<div class="entered" [ngClass]="status ? 'hide' : 'show'">
+    <h1>you're in!</h1>
+    <button (click)="removeUser()">log out</button>
+</div>
