@@ -2,7 +2,7 @@
   "name": "angular-app",
   "version": "0.0.0",
   "scripts": {
-    "build": "ng build --prod",
+    "build": "ng build",
     "ng": "ng",
     "start": "node server.js",
     "serve": "ng serve",
